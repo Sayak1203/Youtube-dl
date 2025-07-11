@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+  window.addEventListener("pageshow", function(event) {
+    // If the page was loaded from bfcache, do a full reload
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download Options - YT Neon</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container download-container">
+        <div class="logo-container">
+            <img src="/static/images/logo.svg" alt="YT Neon Logo" class="logo">
+        </div>
+        
+        <div class="video-info">
+            <div class="thumbnail-container">
+                <img id="video-thumbnail" src="" alt="Video Thumbnail" class="thumbnail">
+            </div>
+            <h1 id="video-title" class="video-title">Loading video info...</h1>
+        </div>
+        
+        <div class="download-options">
+            <h2 class="section-title">Video Formats</h2>
+            <div id="video-formats" class="formats-list">
+                <div class="loading-spinner">
+                    <div class="spinner-circle"></div>
+                    <div class="spinner-circle"></div>
+                    <div class="spinner-circle"></div>
+                </div>
+            </div>
+            
+            <h2 class="section-title">Audio Formats</h2>
+            <div id="audio-formats" class="formats-list">
+                <div class="loading-spinner">
+                    <div class="spinner-circle"></div>
+                    <div class="spinner-circle"></div>
+                    <div class="spinner-circle"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="back-button">
+            <button id="back-btn" class="neon-button">
+                <span class="button-icon"><i class="fas fa-arrow-left"></i></span>
+                <span class="button-text">Back</span>
+            </button>
+        </div>
+    </div>
+    
+    <script src="/static/js/download.js"></script>
+</body>
+</html>

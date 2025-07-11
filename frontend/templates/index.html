@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+  window.addEventListener("pageshow", function(event) {
+    // If the page was loaded from bfcache, do a full reload
+    if (event.persisted) {
+      window.location.reload();
+    }
+  });
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YT Neon - YouTube Downloader</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="/static/images/logo.svg" alt="YT Neon Logo" class="logo">
+        </div>
+        
+        <div class="input-container">
+            <h1 class="title">YouTube Video Downloader</h1>
+            <p class="subtitle">Enter YouTube URL to download</p>
+            
+            <div class="input-box">
+                <input type="text" id="video-url" placeholder="https://www.youtube.com/watch?v=..." class="url-input">
+                <button id="download-btn" class="neon-button">
+                    <span class="button-text">Analyze</span>
+                    <span class="button-icon"><i class="fas fa-bolt"></i></span>
+                </button>
+            </div>
+            
+            <div class="options">
+                <div class="option-toggle">
+                    <span class="option-label">Audio Only</span>
+                    <label class="switch">
+                        <input type="checkbox" id="audio-only">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        
+        <div class="animation-container">
+            <div class="neon-circle"></div>
+            <div class="neon-circle"></div>
+            <div class="neon-circle"></div>
+        </div>
+        
+        <div class="footer">
+            <p class="footer-text">YT Neon - High Quality YouTube Downloads</p>
+        </div>
+    </div>
+    
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
